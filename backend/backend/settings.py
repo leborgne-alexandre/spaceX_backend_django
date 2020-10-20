@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',   
     'spaceX',
+    'spaceX_Api'
 ]
 
 MIDDLEWARE = [

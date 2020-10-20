@@ -16,14 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include                 
 from rest_framework import routers                    
-from spaceX import views                            
+# from spaceX import views 
+from spaceX_Api import views                          
 
 
-router = routers.DefaultRouter()                      
-router.register(r'spaceX', views.SpaceXView, 'spaceX') 
+# router = routers.DefaultRouter()                      
+# router.register(r'spaceX', views.SpaceXView, 'spaceX') 
 
 
 urlpatterns = [
+    path('api/spaceX_api', views.apiOverview, name="api-overview" ),
     path('admin/', admin.site.urls),
-     path('api/', include(router.urls))
+    # path('test/api/', include(router.urls))
 ]
